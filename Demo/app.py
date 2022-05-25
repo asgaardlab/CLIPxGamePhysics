@@ -1,4 +1,7 @@
+import csv
 import os
+import random
+import sys
 import pickle
 from collections import Counter
 from glob import glob
@@ -13,30 +16,35 @@ from tqdm import tqdm
 
 from SimSearch import FaissCosineNeighbors
 
+csv.field_size_limit(sys.maxsize)
+
+
 # DOWNLOAD THE DATASET and Files
-gdown.download(
-    "https://static.taesiri.com/gamephysics/GTAV-Videos.zip",
-    output="./GTAV-Videos.zip",
+gdown.cached_download(
+    url="https://static.taesiri.com/gamephysics/GTAV-Videos.zip",
+    path="./GTAV-Videos.zip",
     quiet=False,
+    md5="e961093bc032f579de060ed65564b4c3",
 )
-gdown.download(
-    "https://static.taesiri.com/gamephysics/mini-GTA-V-Embeddings.zip",
-    output="./GTA-V-Embeddings.zip",
+
+gdown.cached_download(
+    url="https://static.taesiri.com/gamephysics/mini-GTA-V-Embeddings.zip",
+    path="./GTA-V-Embeddings.zip",
     quiet=False,
+    md5="b1228503d5a89eef7e35e2cbf86b2fc0",
 )
 
 # EXTRACT
-
 torchvision.datasets.utils.extract_archive(
     from_path="GTAV-Videos.zip", to_path="Videos/", remove_finished=False
 )
 # EXTRACT
-
 torchvision.datasets.utils.extract_archive(
     from_path="GTA-V-Embeddings.zip",
     to_path="Embeddings/VIT32/",
     remove_finished=False,
 )
+
 # Initialize CLIP model
 clip.available_models()
 
@@ -147,46 +155,44 @@ def gradio_search(query, game_name, selected_model, aggregator, pool_size, k=6):
     for v in relevant_videos:
         results.append(v)
         sid = v.split("/")[-1].split(".")[0]
-        results.append(f"https://www.reddit.com/r/GamePhysics/comments/{sid}/")
+        results.append(
+            f'<a href="https://www.reddit.com/r/GamePhysics/comments/{sid}/" target="_blank">Link to the post</a>'
+        )
+
+    print(f"found {len(results)} results")
     return results
 
 
 def main():
     list_of_games = ["Grand Theft Auto V"]
 
-    title = "CLIP + GamePhysics - Searching dataset of Gameplay bugs"
-    description = "Enter your query and select the game you want to search. The results will be displayed in the console."
-    article = """
-  This demo shows how to use the CLIP model to search for gameplay bugs in a video game.
-  """
-
     # GRADIO APP
-    iface = gr.Interface(
+    main = gr.Interface(
         fn=gradio_search,
         inputs=[
-            gr.inputs.Textbox(
+            gr.Textbox(
                 lines=1,
                 placeholder="Search Query",
-                default="A person flying in the air",
-                label=None,
+                value="A person flying in the air",
+                label="Query",
             ),
-            gr.inputs.Radio(list_of_games, label="Game To Search"),
-            gr.inputs.Radio(["ViT-B/32"], label="MODEL"),
-            gr.inputs.Radio(["Majority", "Top-K"], label="Aggregator"),
-            gr.inputs.Slider(300, 2000, label="Pool Size", default=1000),
+            gr.Radio(list_of_games, label="Game To Search"),
+            gr.Radio(["ViT-B/32"], label="MODEL"),
+            gr.Radio(["Majority", "Top-K"], label="Aggregator"),
+            gr.Slider(300, 2000, label="Pool Size", value=1000),
         ],
         outputs=[
-            gr.outputs.Textbox(type="auto", label="Search Params"),
-            gr.outputs.Video(type="mp4", label="Result 1"),
-            gr.outputs.Textbox(type="auto", label="Submission URL - Result 1"),
-            gr.outputs.Video(type="mp4", label="Result 2"),
-            gr.outputs.Textbox(type="auto", label="Submission URL - Result 2"),
-            gr.outputs.Video(type="mp4", label="Result 3"),
-            gr.outputs.Textbox(type="auto", label="Submission URL - Result 3"),
-            gr.outputs.Video(type="mp4", label="Result 4"),
-            gr.outputs.Textbox(type="auto", label="Submission URL - Result 4"),
-            gr.outputs.Video(type="mp4", label="Result 5"),
-            gr.outputs.Textbox(type="auto", label="Submission URL - Result 5"),
+            gr.Textbox(type="auto", label="Search Params"),
+            gr.Video(type="mp4", label="Result 1"),
+            gr.Markdown(),
+            gr.Video(type="mp4", label="Result 2"),
+            gr.Markdown(),
+            gr.Video(type="mp4", label="Result 3"),
+            gr.Markdown(),
+            gr.Video(type="mp4", label="Result 4"),
+            gr.Markdown(),
+            gr.Video(type="mp4", label="Result 5"),
+            gr.Markdown(),
         ],
         examples=[
             ["A red car", list_of_games[0], "ViT-B/32", "Top-K", 1000],
@@ -211,13 +217,25 @@ def main():
             ["A car stuck in a rock", list_of_games[0], "ViT-B/32", "Majority", 1000],
             ["A car stuck in a tree", list_of_games[0], "ViT-B/32", "Majority", 1000],
         ],
-        title=title,
-        description=description,
-        article=article,
-        enable_queue=True,
     )
 
-    iface.launch()
+    blocks = gr.Blocks()
+    with blocks:
+
+        gr.Markdown(
+            """
+        # CLIP + GamePhysics - Searching dataset of Gameplay bugs
+        Enter your query and select the game you want to search. The results will be displayed in the console.
+        This demo shows how to use the CLIP model to search for gameplay bugs in a video game.
+        """
+        )
+
+        gr.TabbedInterface([main], ["GTA V Demo"])
+
+    blocks.launch(
+        debug=True,
+        enable_queue=True,
+    )
 
 
 if __name__ == "__main__":
