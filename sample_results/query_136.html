@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Grid</title>
+    <style>
+        .grid {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .grid-sizer,
+        .grid-item {
+            width: 19%;
+        }
+
+        .grid-item {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .grid-item-width2 {
+            width: 39.25%;
+        }
+
+        .gutter-sizer {
+            width: 1.25%;
+        }
+
+        .grid-container {
+            max-width: 3000px;
+            margin-top: 75px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        @media screen and (max-width: 599px) {
+
+            /* 2 columns for smaller screens */
+            .grid-sizer,
+            .grid-item {
+                width: 46%;
+            }
+
+            .gutter-sizer {
+                width: 4%;
+            }
+
+            .grid {
+                max-width: 598px;
+                margin: 0 auto;
+            }
+
+            .grid-container {
+                max-width: 599px;
+                padding-left: 10px;
+            }
+        }
+
+        h1 {
+            font-family: "helvetica";
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .check {
+            margin: 0 auto;
+            max-width: 200px;
+            margin-top: 75px;
+
+            label {
+                font-family: "helvetica";
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+
+        .grid-item {
+            position: relative;
+        }
+
+        .grid-item-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border: 3px solid black;
+            /* Add this line to add a black border */
+        }
+
+        .intro {
+            text-align: center;
+            margin: 50px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .intro h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 16px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .intro h1 em {
+            font-style: italic;
+        }
+
+        .emphasized-text {
+            color: #0072bc;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+</head>
+
+<body>
+    <div class="intro">
+        <h1>Search results for <em class="emphasized-text">"A ship is
+                floating in the air."</em></h1>
+        <p>
+            Below, we showcase the search results as GIF animations. Each animation features a segment from a video that
+            best matches your <span class="emphasized-text">query</span>. Hover over each image to play the GIF.
+        </p>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            <div class="gutter-sizer"></div>
+            <div class="grid-item">
+                <img src="./query_136/video_1.jpeg" data-gif="./query_136/video_1.gif">
+                <div class="grid-item-text">1</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_2.jpeg" data-gif="./query_136/video_2.gif">
+                <div class="grid-item-text">2</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_3.jpeg" data-gif="./query_136/video_3.gif">
+                <div class="grid-item-text">3</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_4.jpeg" data-gif="./query_136/video_4.gif">
+                <div class="grid-item-text">4</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_5.jpeg" data-gif="./query_136/video_5.gif">
+                <div class="grid-item-text">5</div>
+            </div>
+
+
+            <div class="grid-item">
+                <img src="./query_136/video_6.jpeg" data-gif="./query_136/video_6.gif">
+                <div class="grid-item-text">6</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_7.jpeg" data-gif="./query_136/video_7.gif">
+                <div class="grid-item-text">7</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_8.jpeg" data-gif="./query_136/video_8.gif">
+                <div class="grid-item-text">8</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_9.jpeg" data-gif="./query_136/video_9.gif">
+                <div class="grid-item-text">9</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_10.jpeg" data-gif="./query_136/video_10.gif">
+                <div class="grid-item-text">10</div>
+            </div>
+
+
+            <div class="grid-item">
+                <img src="./query_136/video_11.jpeg" data-gif="./query_136/video_11.gif">
+                <div class="grid-item-text">11</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_12.jpeg" data-gif="./query_136/video_12.gif">
+                <div class="grid-item-text">12</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_13.jpeg" data-gif="./query_136/video_13.gif">
+                <div class="grid-item-text">13</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_14.jpeg" data-gif="./query_136/video_14.gif">
+                <div class="grid-item-text">14</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_15.jpeg" data-gif="./query_136/video_15.gif">
+                <div class="grid-item-text">15</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_16.jpeg" data-gif="./query_136/video_16.gif">
+                <div class="grid-item-text">16</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_17.jpeg" data-gif="./query_136/video_17.gif">
+                <div class="grid-item-text">17</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_18.jpeg" data-gif="./query_136/video_18.gif">
+                <div class="grid-item-text">18</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_19.jpeg" data-gif="./query_136/video_19.gif">
+                <div class="grid-item-text">19</div>
+            </div>
+
+
+
+            <div class="grid-item">
+                <img src="./query_136/video_20.jpeg" data-gif="./query_136/video_20.gif">
+                <div class="grid-item-text">20</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_21.jpeg" data-gif="./query_136/video_21.gif">
+                <div class="grid-item-text">21</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_22.jpeg" data-gif="./query_136/video_22.gif">
+                <div class="grid-item-text">22</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_23.jpeg" data-gif="./query_136/video_23.gif">
+                <div class="grid-item-text">23</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_24.jpeg" data-gif="./query_136/video_24.gif">
+                <div class="grid-item-text">24</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_25.jpeg" data-gif="./query_136/video_25.gif">
+                <div class="grid-item-text">25</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_26.jpeg" data-gif="./query_136/video_26.gif">
+                <div class="grid-item-text">26</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_27.jpeg" data-gif="./query_136/video_27.gif">
+                <div class="grid-item-text">27</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_28.jpeg" data-gif="./query_136/video_28.gif">
+                <div class="grid-item-text">28</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_29.jpeg" data-gif="./query_136/video_29.gif">
+                <div class="grid-item-text">29</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_30.jpeg" data-gif="./query_136/video_30.gif">
+                <div class="grid-item-text">30</div>
+            </div>
+
+
+
+
+            <div class="grid-item">
+                <img src="./query_136/video_31.jpeg" data-gif="./query_136/video_31.gif">
+                <div class="grid-item-text">31</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_32.jpeg" data-gif="./query_136/video_32.gif">
+                <div class="grid-item-text">32</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_33.jpeg" data-gif="./query_136/video_33.gif">
+                <div class="grid-item-text">33</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_34.jpeg" data-gif="./query_136/video_34.gif">
+                <div class="grid-item-text">34</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_35.jpeg" data-gif="./query_136/video_35.gif">
+                <div class="grid-item-text">35</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_36.jpeg" data-gif="./query_136/video_36.gif">
+                <div class="grid-item-text">36</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_37.jpeg" data-gif="./query_136/video_37.gif">
+                <div class="grid-item-text">37</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_38.jpeg" data-gif="./query_136/video_38.gif">
+                <div class="grid-item-text">38</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_39.jpeg" data-gif="./query_136/video_39.gif">
+                <div class="grid-item-text">39</div>
+            </div>
+
+
+            <div class="grid-item">
+                <img src="./query_136/video_40.jpeg" data-gif="./query_136/video_40.gif">
+                <div class="grid-item-text">40</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_41.jpeg" data-gif="./query_136/video_41.gif">
+                <div class="grid-item-text">41</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_42.jpeg" data-gif="./query_136/video_42.gif">
+                <div class="grid-item-text">42</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_43.jpeg" data-gif="./query_136/video_43.gif">
+                <div class="grid-item-text">43</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_44.jpeg" data-gif="./query_136/video_44.gif">
+                <div class="grid-item-text">44</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_45.jpeg" data-gif="./query_136/video_45.gif">
+                <div class="grid-item-text">45</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_46.jpeg" data-gif="./query_136/video_46.gif">
+                <div class="grid-item-text">46</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_47.jpeg" data-gif="./query_136/video_47.gif">
+                <div class="grid-item-text">47</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_48.jpeg" data-gif="./query_136/video_48.gif">
+                <div class="grid-item-text">48</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_49.jpeg" data-gif="./query_136/video_49.gif">
+                <div class="grid-item-text">49</div>
+            </div>
+            <div class="grid-item">
+                <img src="./query_136/video_50.jpeg" data-gif="./query_136/video_50.gif">
+                <div class="grid-item-text">50</div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            gutter: '.gutter-sizer',
+            percentPosition: true
+        });
+
+        $('#image-size').click(function () {
+            if (this.checked) {
+                $(".randomize").addClass("grid-item-width2");
+                $('.grid').masonry('layout');
+            } else {
+                $(".randomize").removeClass("grid-item-width2");
+                $('.grid').masonry('layout');
+            }
+        });
+
+        // Function to play GIF on mouse hover
+        $('.grid-item img').on('mouseenter', function () {
+            var gifUrl = $(this).data('gif');
+            $(this).attr('src', gifUrl);
+        });
+
+        // Function to pause GIF on mouse leave
+        $('.grid-item img').on('mouseleave', function () {
+            var staticImageUrl = $(this).attr('src').replace('.gif', '.jpeg');
+            $(this).attr('src', staticImageUrl);
+        });
+    </script>
+</body>
+
+</html>
