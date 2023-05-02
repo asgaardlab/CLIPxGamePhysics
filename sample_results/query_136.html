@@ -138,6 +138,7 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -374,12 +375,23 @@
 
 
     <script>
+
         $('.grid').masonry({
             itemSelector: '.grid-item',
             columnWidth: '.grid-sizer',
             gutter: '.gutter-sizer',
             percentPosition: true
         });
+
+        $(window).on('load', function () {
+            $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                gutter: '.gutter-sizer',
+                percentPosition: true
+            });
+        });
+
 
         $('#image-size').click(function () {
             if (this.checked) {
