@@ -7,7 +7,7 @@
     content="CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot transfer learning">
   <meta name="keywords" content="CLIP, GamePhysics, Zero-Shot Transfer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot transfer learning</title>
+  <title>Towards bug identification in gameplay videos using zero-shot transfer learning</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P8DXFXFKM"></script>
@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.ico">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -55,8 +55,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">CLIP meets GamePhysics: Towards bug identification in gameplay
-              videos using zero-shot transfer learning</h1>
+            <h1 class="title is-1 publication-title">CLIP Meets GamePhysics</h1>
+            <h1 class="title is-1 publication-title">Leveraging Contrastive Pretrained Models for Gameplay Video
+              Retrieval Tasks</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://taesiri.com">Mohammad Reza Taesiri</a><sup>1</sup>,</span>
@@ -127,26 +128,23 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              Gameplay videos contain rich information about how players interact with the game and how the game
-              responds. Sharing gameplay videos on social media platforms, such as Reddit, has become a common practice
-              for many players. Often, players will share gameplay videos that showcase video game bugs. Such gameplay
-              videos are software artifacts that can be utilized for game testing, as they provide insight for bug
-              analysis. Although large repositories of gameplay videos exist, parsing and mining them in an effective
-              and structured fashion has still remained a big challenge.
-              In this paper, we propose a search method that accepts any English text query as input to retrieve
-              relevant videos from large repositories of gameplay videos. Our approach does not rely on any external
-              information (such as video metadata); it works solely based on the content of the video. By leveraging the
-              zero-shot transfer capabilities of the Contrastive Language-Image Pre-Training (CLIP) model, our approach
-              does not require any data labeling or training. To evaluate our approach, we present the <span
-                class="dnerf">GamePhysics</span> dataset consisting of 26,954 videos from 1,873 games, that were
-              collected from the GamePhysics section on the Reddit website. Our approach shows promising results in our
-              extensive analysis of simple queries, compound queries, and bug queries, indicating that our approach is
-              useful for object and event detection in gameplay videos. An example application of our approach is as a
-              gameplay video search engine to aid in reproducing video game bugs.
-            </p>
+
+              Our project focuses on harnessing the power of large pre-trained models, known as foundation models, to
+              enhance the search and analysis of gameplay videos. By utilizing the advanced capabilities of models such
+              as CLIP, we effectively retrieve relevant gameplay videos based on their content, bypassing the need for
+              external metadata. This approach provides a more efficient and structured method for navigating the
+              abundant repositories of gameplay videos available online.
+
+              With potential applications in game testing, bug analysis, and event detection, our work aspires to enrich
+              the toolset available to developers. Furthermore, we introduce the <span
+                class="gamephysics">GamePhysics</span>
+              dataset, consisting of
+              26,954 videos from 1,873 games, collected from the GamePhysics section on the Reddit website. Explore our
+              website to learn more about our innovative project and its impact on advancing the gaming industry and
+              enhancing developer resources.
           </div>
         </div>
       </div>
@@ -159,7 +157,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Sample Outputs</h2>
+          <h2 class="title is-3">Sample Results</h2>
         </div>
       </div>
       <div class="columns is-centered">
@@ -167,7 +165,7 @@
         <!-- Horse on the air -->
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">A horse in the air</h2>
+            <h4 class="title is-3">A horse in the air</h4>
             <p>
               <a href="https://www.reddit.com/r/GamePhysics/comments/9rqabp/red_dead_redemption_2_things_you_find_in_rdr2/"
                 target="_blank">Video <i class="fas fa-external-link-alt"></i></a>
@@ -183,7 +181,7 @@
         <!-- A person stuck in a barrel -->
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">A person stuck in a barrel</h2>
+            <h4 class="title is-3">A person stuck in a barrel</h4>
             <p>
               <a href="https://www.reddit.com/r/GamePhysics/comments/g5pm35/skyrim_a_fabulous_death/"
                 target="_blank">Video <i class="fas fa-external-link-alt"></i></a> of '<i>A
@@ -271,9 +269,31 @@
     </div>
   </section>
 
+  <section class="section" id="papers">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Publications</h2>
+
+      <div class="paper">
+        <h3 class="paper-title">CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot
+          transfer learning</h3>
+        <p class="paper-authors">Mohammad Reza Taesiri, Finlay Macklon and Cor-Paul Bezemer</p>
+      </div>
+
+      <hr class="divider">
+
+      <div class="paper">
+        <h3 class="paper-title">Leveraging Contrastive Pretrained Models for Gameplay Video Retrieval Tasks</h3>
+        <p class="paper-authors">Mohammad Reza Taesiri, Finlay Macklon, Sarra Habchi and Cor-Paul Bezemer</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
+      <h2 class="title">Citation Information</h2>
       <pre><code>@INPROCEEDINGS {9796271,
         author = {M. Taesiri and F. Macklon and C. Bezemer},
         booktitle = {2022 IEEE/ACM 19th International Conference on Mining Software Repositories (MSR)},
@@ -291,6 +311,13 @@
         month = {may}
         }
         </code></pre>
+
+      <pre><code>@article {TBA,
+          author = {M. Taesiri and F. Macklon, S. Habchi, and C. Bezemer},
+          title = {Leveraging Contrastive Pretrained Models for Gameplay Video Retrieval Tasks},
+          year = {2023},
+          }
+          </code></pre>
     </div>
   </section>
 
