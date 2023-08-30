@@ -47,7 +47,7 @@ PyWavelets==1.2.0
 regex==2021.11.10
 requests==2.31.0
 scikit-image==0.19.1
-scipy==1.7.3
+scipy==1.10.0
 six==1.16.0
 smmap==5.0.0
 soupsieve==2.3.1
