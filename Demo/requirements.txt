@@ -7,7 +7,7 @@ cffi==1.15.0
 charset-normalizer==2.0.10
 click==8.0.3
 clip @ git+https://github.com/openai/CLIP.git@573315e83f07b53a61ff5098757e8fc885f1703e
-cryptography==39.0.1
+cryptography==41.0.4
 cycler==0.11.0
 faiss-cpu==1.7.2
 ffmpy==0.3.0
