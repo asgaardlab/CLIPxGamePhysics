@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="description"
-    content="CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot transfer learning">
-  <meta name="keywords" content="CLIP, GamePhysics, Zero-Shot Transfer">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Towards bug identification in gameplay videos using zero-shot transfer learning</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description"
+      content="CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot transfer learning">
+    <meta name="keywords" content="CLIP, GamePhysics, Zero-Shot Transfer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Towards bug identification in gameplay videos using zero-shot
+      transfer learning</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P8DXFXFKM"></script>
-  <script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1P8DXFXFKM"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -21,33 +23,40 @@
 
     gtag('config', 'G-1P8DXFXFKM');
   </script>
-  <link rel="stylesheet" href="https://gradio.s3-us-west-2.amazonaws.com/2.6.2/static/bundle.css">
+    <link rel="stylesheet"
+      href="https://gradio.s3-us-west-2.amazonaws.com/2.6.2/static/bundle.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.ico">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.ico">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-</head>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
 
-<body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
+  </head>
+
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu"
+          aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
     </div>
   </nav>
   <section class="hero">
@@ -56,20 +65,25 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">CLIP Meets GamePhysics</h1>
-            <h1 class="title is-1 publication-title">Leveraging Contrastive Pretrained Models for Gameplay Video
+            <h1 class="title is-1 publication-title">Leveraging Contrastive
+              Pretrained Models for Gameplay Video
               Retrieval Tasks</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://taesiri.com">Mohammad Reza Taesiri</a><sup>1</sup>,</span>
+                <a href="https://taesiri.com">Mohammad Reza
+                  Taesiri</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="https://asgaard.ece.ualberta.ca/">Finlay Macklon</a><sup>1</sup>,</span>
+                <a href="https://asgaard.ece.ualberta.ca/">Finlay
+                  Macklon</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="https://asgaard.ece.ualberta.ca/">Cor-Paul Bezemer</a><sup>1</sup>,
+                <a href="https://asgaard.ece.ualberta.ca/">Cor-Paul
+                  Bezemer</a><sup>1</sup>,
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>University of Alberta,</span>
+              <span class="author-block"><sup>1</sup>University of
+                Alberta,</span>
             </div>
 
             <div class="column has-text-centered">
@@ -85,7 +99,8 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2203.11096" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2203.11096"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -104,197 +119,258 @@
                 </span>
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://drive.google.com/drive/folders/1pn5rpixj8KCRWsEGO8bvFagjZwOIt-My?usp=sharing"
+                  <a
+                    href="https://drive.google.com/drive/folders/1pn5rpixj8KCRWsEGO8bvFagjZwOIt-My?usp=sharing"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="far fa-images"></i>
                     </span>
                     <span>Dataset</span>
                   </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <hr>
 
-
-
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Overview</h2>
-          <div class="content has-text-justified">
-            <p>
-
-              Our project focuses on harnessing the power of large pre-trained models, known as foundation models, to
-              enhance the search and analysis of gameplay videos. By utilizing the advanced capabilities of models such
-              as CLIP, we effectively retrieve relevant gameplay videos based on their content, bypassing the need for
-              external metadata. This approach provides a more efficient and structured method for navigating the
-              abundant repositories of gameplay videos available online.
-
-              With potential applications in game testing, bug analysis, and event detection, our work aspires to enrich
-              the toolset available to developers. Furthermore, we introduce the <span
-                class="gamephysics">GamePhysics</span>
-              dataset, consisting of
-              26,954 videos from 1,873 games, collected from the GamePhysics section on the Reddit website. Explore our
-              website to learn more about our innovative project and its impact on advancing the gaming industry and
-              enhancing developer resources.
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div style="text-align: center;">
+              <h5 class="title is-3">
+                📢 Exciting News! Introducing <a
+                  href="https://glitchbench.github.io/" target="_blank"
+                  rel="noopener noreferrer">GlitchBench</a> 🚀
+              </h5>
+              <p>
+                A new benchmark dataset for evaluating large multimodal models.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <hr>
 
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Overview</h2>
+            <div class="content has-text-justified">
+              <p>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Sample Results</h2>
-        </div>
-      </div>
-      <div class="columns is-centered">
+                Our project focuses on harnessing the power of large pre-trained
+                models, known as foundation models, to
+                enhance the search and analysis of gameplay videos. By utilizing
+                the advanced capabilities of models such
+                as CLIP, we effectively retrieve relevant gameplay videos based
+                on
+                their content, bypassing the need for
+                external metadata. This approach provides a more efficient and
+                structured method for navigating the
+                abundant repositories of gameplay videos available online.
 
-        <!-- Horse on the air -->
-        <div class="column">
-          <div class="content">
-            <h4 class="title is-3">A horse in the air</h4>
-            <p>
-              <a href="https://www.reddit.com/r/GamePhysics/comments/9rqabp/red_dead_redemption_2_things_you_find_in_rdr2/"
-                target="_blank">Video <i class="fas fa-external-link-alt"></i></a>
-              identified by our approach with the bug query '<i>A horse in the air</i>' form Red Dead Redemption 2.
-            </p>
-            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" height="100%">
-              <source src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/9rqabp.mp4" type="video/mp4">
-            </video>
+                With potential applications in game testing, bug analysis, and
+                event detection, our work aspires to enrich
+                the toolset available to developers. Furthermore, we introduce
+                the
+                <span
+                  class="gamephysics">GamePhysics</span>
+                dataset, consisting of
+                26,954 videos from 1,873 games, collected from the GamePhysics
+                section on the Reddit website. Explore our
+                website to learn more about our innovative project and its
+                impact
+                on advancing the gaming industry and
+                enhancing developer resources.
+              </div>
+            </div>
           </div>
         </div>
-        <!--/ Horse on the air -->
+      </section>
 
-        <!-- A person stuck in a barrel -->
-        <div class="column">
-          <div class="content">
-            <h4 class="title is-3">A person stuck in a barrel</h4>
-            <p>
-              <a href="https://www.reddit.com/r/GamePhysics/comments/g5pm35/skyrim_a_fabulous_death/"
-                target="_blank">Video <i class="fas fa-external-link-alt"></i></a> of '<i>A
-                person stuck in a barrel</i>' from The Elder Scrolls V: Skyrim.
-            </p>
-            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" height="100%">
-              <source src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/g5pm35.mp4" type="video/mp4">
-            </video>
+      <section class="section">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Sample Results</h2>
+            </div>
           </div>
-        </div>
-        <!--/ A person stuck in a barrel -->
+          <div class="columns is-centered">
 
+            <!-- Horse on the air -->
+            <div class="column">
+              <div class="content">
+                <h4 class="title is-3">A horse in the air</h4>
+                <p>
+                  <a
+                    href="https://www.reddit.com/r/GamePhysics/comments/9rqabp/red_dead_redemption_2_things_you_find_in_rdr2/"
+                    target="_blank">Video <i
+                      class="fas fa-external-link-alt"></i></a>
+                  identified by our approach with the bug query '<i>A horse in
+                    the
+                    air</i>' form Red Dead Redemption 2.
+                </p>
+                <video id="dollyzoom" autoplay controls muted loop
+                  height="100%">
+                  <source
+                    src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/9rqabp.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <!--/ Horse on the air -->
 
+            <!-- A person stuck in a barrel -->
+            <div class="column">
+              <div class="content">
+                <h4 class="title is-3">A person stuck in a barrel</h4>
+                <p>
+                  <a
+                    href="https://www.reddit.com/r/GamePhysics/comments/g5pm35/skyrim_a_fabulous_death/"
+                    target="_blank">Video <i
+                      class="fas fa-external-link-alt"></i></a> of '<i>A
+                    person stuck in a barrel</i>' from The Elder Scrolls V:
+                  Skyrim.
+                </p>
+                <video id="dollyzoom" autoplay controls muted loop
+                  height="100%">
+                  <source
+                    src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/g5pm35.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <!--/ A person stuck in a barrel -->
 
-
-      </div>
-      <div class="columns is-centered">
-        <!-- A car in a vertical position -->
-        <div class="column">
-          <div class="content">
-            <h2 class="title is-3">A car in a vertical position</h2>
-            <p>
-              <a href="https://www.reddit.com/r/GamePhysics/comments/6xplqg/grand_theft_auto_v_allllrighty_then/"
-                target="_blank">Video <i class="fas fa-external-link-alt"></i></a>
-              identified by our approach with the bug query '<i>A car in a vertical position</i>' form Grand Theft Auto
-              V.
-            </p>
-            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" height="100%">
-              <source src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/6xplqg.mp4" type="video/mp4">
-            </video>
           </div>
-        </div>
-        <!--/ A car in a vertical position -->
+          <div class="columns is-centered">
+            <!-- A car in a vertical position -->
+            <div class="column">
+              <div class="content">
+                <h2 class="title is-3">A car in a vertical position</h2>
+                <p>
+                  <a
+                    href="https://www.reddit.com/r/GamePhysics/comments/6xplqg/grand_theft_auto_v_allllrighty_then/"
+                    target="_blank">Video <i
+                      class="fas fa-external-link-alt"></i></a>
+                  identified by our approach with the bug query '<i>A car in a
+                    vertical position</i>' form Grand Theft Auto
+                  V.
+                </p>
+                <video id="dollyzoom" autoplay controls muted loop
+                  height="100%">
+                  <source
+                    src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/6xplqg.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <!--/ A car in a vertical position -->
 
-        <!-- A car stuck in a tree -->
-        <div class="column">
-          <div class="content">
-            <h2 class="title is-3">A car stuck in a tree</h2>
-            <p>
-              <a href="https://www.reddit.com/r/GamePhysics/comments/4jirzj/gtav_tree_car/" target="_blank">Video
-                <i class="fas fa-external-link-alt"></i></a> identified by our approach with the bug query of '<i>A car
-                stuck in a tree</i>' from Grand Theft Auto V.
-            </p>
-            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" height="100%">
-              <source src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/4jirzj.mp4" type="video/mp4">
-            </video>
+            <!-- A car stuck in a tree -->
+            <div class="column">
+              <div class="content">
+                <h2 class="title is-3">A car stuck in a tree</h2>
+                <p>
+                  <a
+                    href="https://www.reddit.com/r/GamePhysics/comments/4jirzj/gtav_tree_car/"
+                    target="_blank">Video
+                    <i class="fas fa-external-link-alt"></i></a> identified by
+                  our
+                  approach with the bug query of '<i>A car
+                    stuck in a tree</i>' from Grand Theft Auto V.
+                </p>
+                <video id="dollyzoom" autoplay controls muted loop
+                  height="100%">
+                  <source
+                    src="https://asgaardlab.github.io/CLIPxGamePhysics/static/videos/4jirzj.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <!--/ A car stuck in a tree -->
           </div>
-        </div>
-        <!--/ A car stuck in a tree -->
-      </div>
-  </section>
+        </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Demo. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Live Demo</h2>
-          <p> If the Huggingface demo below is not loading properly for you, please visit this <a
-              href="https://huggingface.co/spaces/asgaardlab/CLIPxGamePhysics" target="_blank">link
-              <i class="fas fa-external-link-alt"></i></a>.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <iframe src="https://asgaardlab-clipxgamephysics.hf.space" frameborder="0" style="width: 100%;  margin: auto;"
-        height="980"></iframe>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Media</h2>
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/vGFaiLeoLWw?start=765" frameborder="0"
-              allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        <section class="section">
+          <div class="container is-max-desktop">
+            <!-- Demo. -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">Live Demo</h2>
+                <p> If the Huggingface demo below is not loading properly for
+                  you,
+                  please visit this <a
+                    href="https://huggingface.co/spaces/asgaardlab/CLIPxGamePhysics"
+                    target="_blank">link
+                    <i class="fas fa-external-link-alt"></i></a>.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <section class="section" id="papers">
-    <div class="container is-max-desktop content">
-      <h2 class="title">Publications</h2>
+        <section class="section">
+          <div class="container is-max-desktop">
+            <iframe src="https://asgaardlab-clipxgamephysics.hf.space"
+              frameborder="0" style="width: 100%;  margin: auto;"
+              height="980"></iframe>
+          </div>
+        </section>
 
-      <div class="paper">
-        <h3 class="paper-title">CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot
-          transfer learning</h3>
-        <p class="paper-authors">Mohammad Reza Taesiri, Finlay Macklon and Cor-Paul Bezemer</p>
-      </div>
+        <section class="section">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">Media</h2>
+                <div class="publication-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/vGFaiLeoLWw?start=765"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <hr class="divider">
+        <section class="section" id="papers">
+          <div class="container is-max-desktop content">
+            <h2 class="title">Publications</h2>
 
-      <div class="paper">
-        <h3 class="paper-title">Leveraging Contrastive Pretrained Models for Gameplay Video Retrieval Tasks</h3>
-        <p class="paper-authors">Mohammad Reza Taesiri, Finlay Macklon, Sarra Habchi and Cor-Paul Bezemer</p>
-      </div>
+            <div class="paper">
+              <h3 class="paper-title">CLIP meets GamePhysics: Towards bug
+                identification in gameplay videos using zero-shot
+                transfer learning</h3>
+              <p class="paper-authors">Mohammad Reza Taesiri, Finlay Macklon and
+                Cor-Paul Bezemer</p>
+            </div>
 
-    </div>
-  </section>
+            <hr class="divider">
 
+            <div class="paper">
+              <h3 class="paper-title">Leveraging Contrastive Pretrained Models
+                for
+                Gameplay Video Retrieval Tasks</h3>
+              <p class="paper-authors">Mohammad Reza Taesiri, Finlay Macklon,
+                Sarra Habchi and Cor-Paul Bezemer</p>
+            </div>
 
+          </div>
+        </section>
 
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">Citation Information</h2>
-      <pre><code>@INPROCEEDINGS {9796271,
+        <section class="section" id="BibTeX">
+          <div class="container is-max-desktop content">
+            <h2 class="title">Citation Information</h2>
+            <pre><code>@INPROCEEDINGS {9796271,
         author = {M. Taesiri and F. Macklon and C. Bezemer},
         booktitle = {2022 IEEE/ACM 19th International Conference on Mining Software Repositories (MSR)},
         title = {CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot transfer learning},
@@ -312,31 +388,33 @@
         }
         </code></pre>
 
-      <pre><code>@article {TBA,
+            <pre><code>@article {TBA,
           author = {M. Taesiri and F. Macklon, S. Habchi, and C. Bezemer},
           title = {Leveraging Contrastive Pretrained Models for Gameplay Video Retrieval Tasks},
           year = {2023},
           }
           </code></pre>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This website is forked from the
-              <a href="https://nerfies.github.io/">Nerfies website</a> and
-              <a href="https://github.com/nerfies/nerfies.github.io">source code</a>
-            </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+        </section>
 
-</body>
+        <footer class="footer">
+          <div class="container">
+            <div class="columns is-centered">
+              <div class="column is-8">
+                <div class="content">
+                  <p>
+                    This website is forked from the
+                    <a href="https://nerfies.github.io/">Nerfies website</a> and
+                    <a
+                      href="https://github.com/nerfies/nerfies.github.io">source
+                      code</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
 
-</html>
+      </body>
+
+    </html>
